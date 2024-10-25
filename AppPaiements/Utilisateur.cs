@@ -18,7 +18,14 @@ namespace AppPaiements
         }
         public void AfficherInfos()
         {
-            Console.WriteLine($"Nom : {Nom}, {Paiements} ");
+            Console.WriteLine($"Utilisateur: {Nom}");
+
+            Console.WriteLine("Liste des paiements:");
+            foreach (var paie in Paiements)
+            {
+                paie.AfficherDetails();
+                Console.WriteLine(); //espace
+            }
         }
         public void AjouterPaiement(Paiement paiement)
         {
